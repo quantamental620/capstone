@@ -1,0 +1,50 @@
+# Datasheet : Machine Learning testing of FX prediction
+
+## Motivation
+
+- The Jupyter notebook creates data to use for this project using market data of exchange rates from Yahoo finance API. 
+- Alternative datasets from Kaggle were considered, but due to dataset not having enough granularity (too few significant figures), enough histor or not being upto date, it is more prudent to download data from a freely accessable source. 
+ 
+## Composition
+
+- The dataset provides the daily close price of major currencies at the end of the New York trading day. 
+- 10 free floating currencies are included, with a focus on Asian currencies plus EURUSD.  
+- Data appears to be missing on public holiday. A fill-forward method is used. 
+- No confidentiality concerns with the data.
+
+## Collection process
+
+- Data Acquisition: Data acquired via Yahoo Finance API using yfinance Python library.
+- Sampling Strategy: The data is sampled at the close of every trading day. Intra-day data may be available. Weekly sampling could be considered by the user. 
+- Time Frame: The data starts on 1 Jan 2004, with data up to 5 August 2025. 
+
+## Preprocessing/cleaning/labelling
+
+- Missing Data Handling: Fill-forward method applied for missing values on public holidays 
+- Feature Engineering: Daily returns, volatility measures, and technical indicators have been calculated from the raw prices.
+- Raw Data Preservation: The original downloaded data preserved alongside processed versions to support future analysis needs.
+
+## Uses
+
+- Primary Use: Training machine learning models for FX price prediction and forecasting.
+- Alternative Uses that could be considered:
+	- Risk management and portfolio optimization
+	- Academic research on currency market behavior
+	- Backtesting trading strategies
+Note: Additional market data or fundamentals may need to be added for further data analysis. 
+
+## Distribution
+
+- Current Distribution: Dataset created locally from Yahoo Finance API calls, not publicly distributed.
+- IP/Licensing:
+	- Yahoo Finance data subject to Yahoo's Terms of Service
+	- Non-commercial use generally permitted
+	- Commercial applications may require additional licensing
+	- Derived datasets should acknowledge Yahoo Finance as source
+
+## Maintenance
+
+- Yahoo finance maintains the data and provides updates on a daily basis.
+- The data is dependent on the availability of the Yahoo Finance API.
+- The completeness and the quality of the data should be reguarly checked. 
+
