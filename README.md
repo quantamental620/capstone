@@ -35,7 +35,7 @@ For XGBoost classifier, the hyperparameter options also include the learning rat
 For the neural network model, hyperparameter options focus on the number of hidden layers, the learning rate and the alpha L2 regularisation parameter. 
 
 ## RESULTS
-Performance is measured using accuracy scores and Sharpe ratios from simulated trading strategies. Average test dataset performance across currencies:
+Performance is measured using accuracy scores and Sharpe ratios from simulated trading strategies. Average test dataset performance across currencies*:
 
 Random Forest (GridSearchCV): 51.82% accuracy, 0.67 Sharpe ratio
 XGBoost (GridSearchCV): 51.63% accuracy, 0.49 Sharpe ratio
@@ -44,3 +44,12 @@ Random Forest (manual): 51.15% accuracy, 0.31 Sharpe ratio
 
 The Random Forest with GridSearchCV shows the most promise, though only this model approaches the ~0.7 Sharpe ratio threshold typically required for production trading strategies. 
 Futher investigation of hyperparmeter optimisation and additional exogenous features is required to provide an implimentable trading strategy. 
+
+*Note that these results are using the option of hyperparmetisation with a higher degree of regularisation (regularisation =1). The performance statistics with less regularisation (=0) are (overall worse except for XGBoost):
+
+Random Forest (GridSearchCV): 51.64% accuracy, 0.37 Sharpe ratio
+XGBoost (GridSearchCV): 52.03% accuracy, 0.69 Sharpe ratio
+Neural Network (GridSearchCV): 51.03% accuracy, 0.34 Sharpe ratio
+Random Forest (manual): 51.15% accuracy, 0.31 Sharpe ratio
+
+
