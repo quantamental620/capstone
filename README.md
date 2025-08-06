@@ -17,10 +17,10 @@ Citation: Data sourced from Yahoo Finance API, subject to Yahoo's Terms of Servi
 ## MODEL 
 Four machine learning approaches are tested:
 
-Random Forest with GridSearchCV - chosen for its robustness and ability to handle non-linear relationships
-XGBoost with GridSearchCV - selected for its gradient boosting capabilities and strong performance on structured data
-Neural Network with GridSearchCV - included to capture complex non-linear patterns
-Random Forest with manual parameter selection - designed to reduce overfitting by finding generalized parameters across all currencies
+- Random Forest with GridSearchCV - chosen for its robustness and ability to handle non-linear relationships
+- XGBoost with GridSearchCV - selected for its gradient boosting capabilities and strong performance on structured data
+- Neural Network with GridSearchCV - included to capture complex non-linear patterns
+- Random Forest with manual parameter selection - designed to reduce overfitting by finding generalized parameters across all currencies
 
 The models predict binary outcomes (up/down) for next-day currency movements using technical trading signals, historical strategy performance, and volatility measures as features.
 
